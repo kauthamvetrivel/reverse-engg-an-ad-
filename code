@@ -1,0 +1,8 @@
+import pandas as pd
+data=pd.read_csv('/Users/ks/Downloads/Untitled spreadsheet - Sheet1 (3).csv')
+data.head()
+from scipy import stats
+stats.shapiro(data.AIRTEL_SPEED)
+stats.shapiro(data.OTHER_SPEED)
+stats.ttest_ind(data.AIRTEL_SPEED, data.OTHER_SPEED)
+stats.ttest_rel(data.AIRTEL_SPEED, data.OTHER_SPEED)
